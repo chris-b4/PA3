@@ -1,4 +1,4 @@
-Hello! Install and initialize Pantheon by following the readme below created by Stanford below. Mahimahi will also need to be initialized. From there, I ran my experiments with the following commands for the 6mbps and 60mbps tracefiles, respectively:
+Hello! Install and initialize Pantheon by following the readme created by Stanford below. Mahimahi will also need to be initialized. From there, I ran my experiments with the following commands for the 6mbps and 60mbps tracefiles, respectively:
 
 ```
 src/experiments/test.py local --schemes "bbr cubic vegas" --uplink-trace ~/pantheon_traces/6mbps.trace --downlink-trace ~/pantheon_traces/6mbps.trace --data-dir ./test_results/6mbps/ --runtime 60 --append-mm-cmds "mm-delay 100"
