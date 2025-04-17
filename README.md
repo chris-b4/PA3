@@ -1,3 +1,15 @@
+Hello! Install and initialize Pantheon by following the readme below created by Stanford below. Mahimahi will also need to be initialized. From there, I ran my experiments with the following commands for the 6mbps and 60mbps tracefiles, respectively:
+
+```
+src/experiments/test.py local --schemes "bbr cubic vegas" --uplink-trace ~/pantheon_traces/6mbps.trace --downlink-trace ~/pantheon_traces/6mbps.trace --data-dir ./test_results/6mbps/ --runtime 60 --append-mm-cmds "mm-delay 100"
+```
+```
+src/experiments/test.py local --schemes "bbr" --uplink-trace ~/pantheon_traces/60mbps.trace --downlink-trace ~/pantheon_traces/60mbps.trace --data-dir ./test_results/60mbps/ --runtime 60 --append-mm-cmds "mm-delay 5"
+```
+
+Once an experiment had concluded I ran the analyze command below to create graphs and reports that made the data easier to comprehend. Good luck!
+
+
 # Pantheon of Congestion Control
 The Pantheon contains wrappers for many popular practical and research
 congestion control schemes. The Pantheon enables them to run on a common
