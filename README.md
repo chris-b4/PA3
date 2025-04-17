@@ -1,4 +1,4 @@
-Hello! Install and initialize Pantheon by following the readme created by Stanford below. Mahimahi will also need to be initialized. From there, I ran my experiments with the following commands for the 6mbps and 60mbps tracefiles, respectively:
+Hello! I used a Ubuntu 16.04 VM. Install and initialize Pantheon by following the readme created by Stanford below. This included cloning the Git into my VM, downloading all needed dependencies, setup script, etc. Mahimahi will also need to be initialized following the directions from their MIT website. From there, I ran my experiments with the following commands for the 6mbps and 60mbps tracefiles, respectively:
 
 ```
 src/experiments/test.py local --schemes "bbr cubic vegas" --uplink-trace ~/pantheon_traces/6mbps.trace --downlink-trace ~/pantheon_traces/6mbps.trace --data-dir ./test_results/6mbps/ --runtime 60 --append-mm-cmds "mm-delay 100"
@@ -7,7 +7,7 @@ src/experiments/test.py local --schemes "bbr cubic vegas" --uplink-trace ~/panth
 src/experiments/test.py local --schemes "bbr" --uplink-trace ~/pantheon_traces/60mbps.trace --downlink-trace ~/pantheon_traces/60mbps.trace --data-dir ./test_results/60mbps/ --runtime 60 --append-mm-cmds "mm-delay 5"
 ```
 
-Once an experiment had concluded I ran the analyze command below to create graphs and reports that made the data easier to comprehend. Good luck!
+For this project I used BBR, Cubic, and Vegas to analyze different network conditions. These would be run with a high-latency, constrained-bandwidth environment and low-latency, high-bandwidth environment, respectively. With the environment completed and ready for testing, I began to use different schemes for analysis.
 
 
 # Pantheon of Congestion Control
